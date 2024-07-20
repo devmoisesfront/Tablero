@@ -1,58 +1,45 @@
+# Tablero de Control
 
-README para el Gestor de Scripts
-Gestor de Scripts
-El Gestor de Scripts es una aplicación web que permite la gestión y ejecución de scripts de manera sencilla y eficiente. La interfaz está diseñada para mostrar el estado actual de los scripts, su última ejecución y proporcionar opciones para actualizarlos o ejecutarlos manualmente.
+Este proyecto es un tablero de control desarrollado para gestionar y visualizar actualizaciones diarias de datos. El tablero muestra banderas verdes si los datos están actualizados correctamente.
 
-Características
-Visualización de scripts: Muestra una lista de scripts con su nombre, última ejecución y estado.
-Ejecución de scripts: Permite ejecutar scripts manualmente a través de un botón en la interfaz.
-Actualización de lista de scripts: Opción para actualizar la lista de scripts mostrada en la interfaz.
-Mensajes de estado: Notificaciones para informar sobre el éxito o fallo de las operaciones.
-Requisitos
-Python 3.12
-Flask
-Bootstrap 4.5.2
-Instalación
-Clonar el repositorio:
+## Descripción
 
-bash
-Copiar código
-git clone git@github.com:devmoisesfront/Tablero.git
-cd Tablero
-Crear un entorno virtual y activarlo:
+El Tablero de Control es una herramienta diseñada para analistas de datos e ingenieros, permitiendo una gestión eficiente de las actualizaciones diarias. Utiliza Python para ejecutar scripts y verificar el estado de los datos, presentando la información de una manera clara y visual.
 
-bash
-Copiar código
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-Instalar las dependencias:
+## Características
 
-bash
-Copiar código
+- **Ejecución de scripts:** Permite ejecutar scripts automáticamente.
+- **Verificación de actualizaciones:** Muestra banderas verdes si los datos están actualizados.
+- **Visualización clara:** Interfaz amigable y fácil de usar para visualizar el estado de las actualizaciones.
+
+## Requisitos
+
+- Python 3.x
+- Bibliotecas necesarias (ver `requirements.txt`)
+
+## Instalación
+
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/devmoisesfront/Tablero.git
+
+   cd Tablero
 pip install -r requirements.txt
-Uso
-Ejecutar la aplicación Flask:
+python main.py
 
-bash
-Copiar código
-flask run
-Abrir un navegador web y navegar a http://127.0.0.1:5000 para ver la aplicación en acción.
+Tablero/
+│
+├── data/                 # Directorio para almacenar los datos
+│
+├── scripts/              # Scripts de actualización y verificación
+│
+├── static/               # Archivos estáticos (CSS, imágenes, etc.)
+│
+├── templates/            # Plantillas HTML para la interfaz
+│
+├── main.py               # Script principal para ejecutar el tablero
+│
+├── requirements.txt      # Archivo de dependencias
+│
+└── README.md             # Este archivo
 
-Estructura del Proyecto
-app.py: Archivo principal que contiene la lógica de la aplicación Flask.
-templates/: Directorio que contiene las plantillas HTML.
-index.html: Plantilla principal para la interfaz del Gestor de Scripts.
-static/: Directorio que contiene archivos estáticos como CSS y JavaScript.
-Personalización
-Actualización de Scripts
-Para actualizar la lista de scripts, puedes definir la lógica en la función update_scripts en app.py. Esta función debe encargarse de obtener la información de los scripts y actualizar el estado en la interfaz.
-
-Ejecución de Scripts
-La ejecución de scripts se maneja en la función execute_script en app.py. Aquí puedes añadir la lógica necesaria para ejecutar los scripts de acuerdo a tus necesidades.
-
-
-<footer>
-    &copy; 2024 Marca registrada y desarrollado e implementado por <a href="https://devmoisesfront.github.io/Portafolio/" target="_blank">Moisés Caez</a>
-</footer>
-
-Si tienes alguna pregunta o sugerencia, no dudes en contactar al desarrollador en el portafolio de Moisés Caez.
