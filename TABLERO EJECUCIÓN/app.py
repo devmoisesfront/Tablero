@@ -3,9 +3,10 @@ import pandas as pd
 import os
 import subprocess
 from datetime import datetime
+import re
 
 app = Flask(__name__)
-app.secret_key = 'supersecretkey'  # Necesario para usar mensajes flash
+app.secret_key = os.getenv('SECRET_KEY', 'supersecretkey')  # Mover a variable de entorno
 
 # Leer scripts de la carpeta scripts
 def get_scripts():
@@ -69,6 +70,12 @@ def update_status(script_name):
 
 # Ejecutar un script
 def run_script(script_name):
+    # Validar nombre del script
+    script_name = os.path.basename(script_name)  # Sanitiza el nombre del script
+    if not re.match(r'^[a-zA-Z0-9_]+$', script_name):
+        flash(f"Nombre de script inválido: {script_name}", "error")
+        return
+
     script_path = os.path.join('scripts', f'{script_name}.py')
     if os.path.exists(script_path):
         try:
