@@ -24,23 +24,22 @@ El Tablero de Control es una herramienta diseñada para analistas de datos e ing
    git clone https://github.com/devmoisesfront/Tablero.git
 
    cd Tablero
+
+ ```sh
 pip install -r requirements.txt
 python main.py
 
    ```sh
 Tablero/
 │
-├── data/                 # Directorio para almacenar los datos
 │
-├── scripts/              # Scripts de actualización y verificación
+├── scripts/              # Scripts para su ejecución 
 │
 ├── static/               # Archivos estáticos (CSS, imágenes, etc.)
 │
 ├── templates/            # Plantillas HTML para la interfaz
 │
 ├── main.py               # Script principal para ejecutar el tablero
-│
-├── requirements.txt      # Archivo de dependencias
 │
 └── README.md             # Este archivo
 
