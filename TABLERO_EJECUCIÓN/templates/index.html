@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Scripts</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Gestor de Scripts</h1>
+        <div class="mt-3">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                <div class="alert alert-dismissible fade show" role="alert">
+                  {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                  {% endfor %}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endif %}
+            {% endwith %}
+        </div>
+        <div class="mt-3">
+            <a href="{{ url_for('update_scripts') }}" class="btn btn-primary mb-3">Actualizar Lista de Scripts</a>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nombre del Script</th>
+                        <th>Última Ejecución</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if scripts_status %}
+                        {% for script in scripts_status %}
+                            <tr>
+                                <td>{{ script.script_name }}</td>
+                                <td>{{ script.last_run }}</td>
+                                <td>
+                                    <span style="color: {{ script.status_color }};">{{ script.status }}</span>
+                                </td>
+                                <td>
+                                    <form action="{{ url_for('execute_script', script_name=script.script_name) }}" method="post">
+                                        <button type="submit" class="btn btn-success">Ejecutar</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="4" class="text-center">No hay scripts para mostrar.</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 desarrollador  e implementado por <a href="https://devmoisesfront.github.io/Portafolio/" target="_blank">Moisés Caez</a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
