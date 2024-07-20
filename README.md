@@ -28,10 +28,29 @@ El Tablero de Control es una herramienta diseñada para analistas de datos e ing
  ```sh
 pip install -r requirements.txt
 python main.py
-
+ ```sh
 
 
 ## Contribuciónes
 Para tus contribuciones y mejoras  puedes escribir  a
 [Mi perfil de LinkedIn](https://www.linkedin.com/in/moisescaez/)
+
+
+## Contribuciones
+
+¡Gracias por considerar contribuir a este proyecto! Aquí hay algunas maneras en las que puedes ayudar:
+
+### Reportar Problemas
+
+Si encuentras un error o tienes una sugerencia para una mejora, por favor abre un [issue](https://github.com/devmoisesfront/Tablero/issues) en GitHub.
+
+### Solicitudes de Extracción (Pull Requests)
+
+Si deseas contribuir con código, sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama para tu característica o arreglo:
+   ```sh
+   git checkout -b nombre-de-tu-rama
+
 
