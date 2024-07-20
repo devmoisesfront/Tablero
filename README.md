@@ -50,23 +50,9 @@ Para actualizar la lista de scripts, puedes definir la lógica en la función up
 Ejecución de Scripts
 La ejecución de scripts se maneja en la función execute_script en app.py. Aquí puedes añadir la lógica necesaria para ejecutar los scripts de acuerdo a tus necesidades.
 
-Footer
-El pie de página de la aplicación incluye información de copyright y el autor:
 
-html
-Copiar código
 <footer>
     &copy; 2024 Marca registrada y desarrollado e implementado por <a href="https://devmoisesfront.github.io/Portafolio/" target="_blank">Moisés Caez</a>
 </footer>
-Contribución
-Si deseas contribuir a este proyecto, por favor sigue estos pasos:
-
-Haz un fork del proyecto.
-Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
-Realiza los cambios necesarios y haz commit (git commit -am 'Añadir nueva funcionalidad').
-Haz push a la rama (git push origin feature/nueva-funcionalidad).
-Crea un nuevo Pull Request.
-Licencia
-Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
 
 Si tienes alguna pregunta o sugerencia, no dudes en contactar al desarrollador en el portafolio de Moisés Caez.
