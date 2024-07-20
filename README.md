@@ -29,22 +29,9 @@ El Tablero de Control es una herramienta diseñada para analistas de datos e ing
 pip install -r requirements.txt
 python main.py
 
- ```sh
-###Contribuciones
 
+
+## Contribuciónes
 Para tus contribuciones y mejoras  puedes escribir  a
 [Mi perfil de LinkedIn](https://www.linkedin.com/in/moisescaez/)
-
-Tablero/
-│
-│
-├── scripts/              # Scripts para su ejecución 
-│
-├── static/               # Archivos estáticos (CSS, imágenes, etc.)
-│
-├── templates/            # Plantillas HTML para la interfaz
-│
-├── main.py               # Script principal para ejecutar el tablero
-│
-└── README.md             # Este archivo
 
