@@ -1,6 +1,6 @@
 # Tablero de Control
 
-Este proyecto es un tablero de control desarrollado para gestionar y visualizar actualizaciones diarias de datos. El tablero muestra banderas verdes si los datos están actualizados correctamente.
+Este proyecto es un tablero de control desarrollado para gestionar y visualizar actualizaciones diarias de scripts. El tablero muestra banderas verdes si los datos están actualizados correctamente.
 
 ## Descripción
 
