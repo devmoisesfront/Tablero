@@ -27,6 +27,7 @@ El Tablero de Control es una herramienta diseñada para analistas de datos e ing
 pip install -r requirements.txt
 python main.py
 
+   ```sh
 Tablero/
 │
 ├── data/                 # Directorio para almacenar los datos
