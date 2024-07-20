@@ -14,7 +14,7 @@ El Tablero de Control es una herramienta diseñada para analistas de datos e ing
 
 ## Requisitos
 
-- Python 3.x
+- Python 3.12
 - Bibliotecas necesarias (ver `requirements.txt`)
 
 ## Instalación
